@@ -1,0 +1,73 @@
+---
+import Icons from "./Icons.astro";
+
+interface Props {
+    title: string;
+}
+const { title } = Astro.props;
+---
+
+<section>
+    <header>
+        <h3>{title}</h3>
+    </header>
+    <div>
+            <slot name="icon" />
+            <slot />
+    </div>
+</section>
+
+<style>
+    section {
+        display: flex;
+        flex-direction: column;
+        background: rgb(42, 42, 64);
+        background: linear-gradient(
+            45deg,
+            rgba(42, 42, 64, 0.25) 0%,
+            rgba(91, 91, 140, 0.25) 100%
+        );
+        border-radius: 20px;
+        padding: 10px;
+        gap: 10px;
+        box-sizing: border-box;
+        background-size: 600% 600%;
+        animation: gradient-card-animation 10s ease infinite;
+        transition: transform 0.5s ease;
+        
+    }
+    section:hover{
+        transform: scale(1.02);
+    }
+    @keyframes gradient-card-animation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    header {
+        background: rgb(42, 42, 64);
+        background: linear-gradient(
+            45deg,
+            rgba(42, 42, 64, 0.25) 0%,
+            rgba(91, 91, 140, 0.25) 100%
+        );
+        height: auto;
+        width: 100%;
+        border-radius: 10px;
+    }
+    div {
+        display: flex;
+        justify-content: flex-end;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+    
+</style>

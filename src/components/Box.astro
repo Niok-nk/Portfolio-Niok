@@ -1,0 +1,36 @@
+---
+const {class: className, ...rest} = Astro.props;
+---
+
+<section class={className} {...rest}>
+    <slot />
+</section>
+<style>
+    section{
+        background: rgb(42,42,64);
+        background: linear-gradient(
+            45deg, 
+            rgba(42,42,64, 0.25) 0%, 
+            rgba(91,91,140, 0.25) 100%);
+        border-radius: 20px;
+        padding: 10px;
+        background-size: 600% 600%;
+        animation: gradient-animation 10s ease infinite;
+        box-sizing: border-box;
+        word-wrap: break-word; /* Para evitar que el texto se desborde */
+        
+    }
+    
+    @keyframes gradient-animation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+</style>
+

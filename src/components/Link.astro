@@ -1,0 +1,38 @@
+---
+
+const { link,  class: className, ...rest } = Astro.props;
+---
+
+<a href={link} class={className} {...rest}><slot /></a>
+<style>
+    a {
+        width: max-content;
+        margin: 10px;
+        padding: 10px 20px;
+        font-family: "Barlow";
+        font-weight: 400;
+        letter-spacing: 0.1em;
+        font-size: 1rem;
+        text-decoration: none;
+        color: #6c6ca6;
+        background: rgb(42, 42, 64);
+        background: linear-gradient(
+            45deg,
+            rgba(42, 42, 64, 0.1) 0%,
+            rgba(91, 91, 140, 0.1) 100%
+        );
+        border-radius: 3rem;
+        transition: 0.3s ease;
+        
+    }
+    a:hover {
+        color: var(--niok);
+        background: linear-gradient(
+            45deg,
+            rgba(42, 42, 64, 0.5) 0%,
+            rgba(91, 91, 140, 0.5) 100%
+        );
+        transform: scale(1.05);
+    
+    }
+</style>

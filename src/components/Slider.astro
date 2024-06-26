@@ -1,0 +1,94 @@
+---
+import Edu from "./Edu.astro";
+
+---
+
+<div class="slider">
+    <div class="slider-container">
+        <div class="card card01">
+            <Edu
+                title="Escritura de Narrativa Gráfica"
+                content="Ministerio de Cultura, 2022"
+            />
+            <Edu 
+                title="Realización Audiovisual" 
+                content="Smartfilms, 2022" 
+            />
+            <Edu
+                title="Adobe ACP en Animaciones Multiplataforma Usando Animate CC"
+                content="Mediapro Training Center Online, 2022"
+            />
+            <Edu
+                title="CSS Avanzado" 
+                content="LinkedIn Learning, 2021" 
+            />
+        </div>
+        <div class="card card02">
+            <Edu
+                title="Introducción al Diseño Gráfico"
+                content="LinkedIn Learning, 2021"
+            />
+            <Edu 
+                title="Fundamentos del Dibujo Storytelling" 
+                content="LinkedIn Learning, 2021" />
+            <Edu
+                title="Fundamentos del Dibujo Vectorial"
+                content="LinkedIn Learning, 2021"
+            />
+            <Edu 
+                title="Fundamentos del Dibujo" 
+                content="LinkedIn Learning, 2021" 
+            />
+        </div>
+        <div class="card card03">
+            <Edu
+                title="Fundamentos del Diseño: Composición"
+                content="LinkedIn Learning, 2021"
+            />
+            <Edu 
+                title="Fundamentos del Diseño: Tipografía" 
+                content="LinkedIn Learning, 2021" 
+            />
+            <Edu
+                title="Photoshop para Diseñadores: Color"
+                content="LinkedIn Learning, 2021"
+            />
+           
+        </div>
+    </div>
+
+</div>
+
+<style>
+    .slider {
+        overflow: hidden;
+        width: 100%;
+        
+    }
+
+    .slider-container {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        
+    }
+
+    .card {
+        min-width: 100%;
+        box-sizing: border-box;
+        padding: 10px; 
+        background: rgb(42,42,64);
+        background: linear-gradient(45deg, rgba(42,42,64,0.25) 0%, rgba(91,91,140,0.25) 100%);
+        border-radius: 20px;
+    }
+
+    .slider-controls {
+        display: flex;
+        justify-content: center;
+        margin: 20px;
+        gap: 10px;
+
+        
+    }
+    
+</style>
+<script src="../scripts/slider.js"></script>

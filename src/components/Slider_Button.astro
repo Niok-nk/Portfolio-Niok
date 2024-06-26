@@ -1,0 +1,45 @@
+<div class="slider-controls">
+    <button id="prev">
+        <svg viewBox="0 0 17.83 17.83" width="18px" transform="scale(-1)">
+            <g>
+                <path
+                    class="rowedu"
+                    d="M16.66,7.03L3.05.23C1.65-.48,0,.54,0,2.11v13.62c0,1.57,1.65,2.58,3.05,1.88l13.62-6.81c1.55-.78,1.55-2.99,0-3.77Z"
+                ></path>
+            </g>
+        </svg></button
+    >
+    <button id="next">
+        <svg viewBox="0 0 17.83 17.83" width="18px">
+            <g>
+                <path
+                    class="rowedu"
+                    d="M16.66,7.03L3.05.23C1.65-.48,0,.54,0,2.11v13.62c0,1.57,1.65,2.58,3.05,1.88l13.62-6.81c1.55-.78,1.55-2.99,0-3.77Z"
+                ></path>
+            </g>
+        </svg></button
+    >
+</div>
+<style>
+    .slider-controls {
+        display: flex;
+        
+        margin: 20px;
+        gap: 10px;
+    }
+
+    button {
+        background-color: transparent;
+        border-style: none;
+        cursor: pointer;
+        padding: 10px;
+        .rowedu {
+            fill: #cecef2;
+            stroke-width: 0px;
+        }
+    }
+    button:hover > svg .rowedu {
+        fill: var(--niok);
+    }
+</style>
+<script src="../scripts/slider.js"></script>

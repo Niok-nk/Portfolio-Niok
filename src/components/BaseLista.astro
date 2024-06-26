@@ -1,0 +1,25 @@
+---
+const { class: className, ...rest } = Astro.props;
+---
+
+<ul class={className} {...rest}>
+    <slot />
+</ul>
+<style>
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        li {
+            background: rgb(42, 42, 64);
+            background: linear-gradient(
+                45deg,
+                rgba(42, 42, 64, 0.25) 0%,
+                rgba(91, 91, 140, 0.25) 100%
+            );
+            border-radius: 10px;
+            font-weight: 600;
+            
+        }
+    }
+</style>
