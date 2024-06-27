@@ -1,0 +1,5 @@
+# Asegurar que los archivos de texto usen CRLF en Windows
+* text=auto eol=crlf
+
+# Manejar los archivos en node_modules como binarios para evitar la conversión de EOL
+node_modules/** binary
