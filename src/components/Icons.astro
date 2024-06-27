@@ -1,8 +1,8 @@
 ---
-
+const {class: className, ...rest} = Astro.props;
 ---
 
-<aside> 
+<aside class={className} {...rest}> 
     <slot />
 </aside>
 
@@ -15,11 +15,18 @@
         margin: 10px;
         padding: 10px;
         gap: 10px;
-        width: 2%;
+        width: 1.6rem;
         height: auto;
         position: absolute;
-        z-index: 2;
+        z-index: 2;  
         
     }
+    @media (width < 600px) {
+        aside{
+            width: 1.2rem;
+        }
+
+    }
+    
     
 </style>

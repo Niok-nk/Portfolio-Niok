@@ -109,6 +109,9 @@ import Icons from "../components/Icons.astro";
 						stroke-linecap="round"
 						stroke-linejoin="round"
 					>
+					<title>
+						Instagram
+					</title>
 						<path stroke="none" d="M0 0h24v24H0z" fill="none"
 						></path>
 						<path
@@ -134,6 +137,9 @@ import Icons from "../components/Icons.astro";
 						stroke-linecap="round"
 						stroke-linejoin="round"
 					>
+					<title>
+						Linkedin
+					</title>
 						<path stroke="none" d="M0 0h24v24H0z" fill="none"
 						></path>
 						<path
@@ -797,7 +803,9 @@ import Icons from "../components/Icons.astro";
 	<main class="portfolio" id="portfolio">
 		
 		<Card title="Diseño web">
-			<img src="./public/RenderElite_02.webp" alt="Hilvania" />
+			<a href="/elite" >
+				<img src="./public/RenderElite_02.webp" alt="Elite" />
+			</a>
 			<Icons name="icons">
 				<svg id="css" viewBox="0 0 26.18 30" height="30px">
 					<defs>
@@ -1565,7 +1573,7 @@ import Icons from "../components/Icons.astro";
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		grid-area: info;
+		
 		p {
 			padding: 10px;
 		}
@@ -1610,7 +1618,7 @@ import Icons from "../components/Icons.astro";
 			transition: 0.5s ease;
 		}
 		a .social:hover {
-			stroke: #ff3000;
+			stroke: var(--niok);
 		}
 	}
 	
