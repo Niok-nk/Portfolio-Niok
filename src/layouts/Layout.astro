@@ -45,6 +45,8 @@ const { title } = Astro.props;
 	:root{
 		--niok: #ff3000;
 		--a3: #7C7CBF;
+		--a9: #191926;
+
 	}
 	@font-face {
 		font-family: "Morganite";
@@ -62,7 +64,7 @@ const { title } = Astro.props;
 	}
 	html {
 		font-family: system-ui, sans-serif;
-		background: #191926;
+		background: var(--a9);
 		color: #AEAED9;
 		scrollbar-width: thin;
 		scrollbar-color: #3a3a5998 transparent;
@@ -71,6 +73,7 @@ const { title } = Astro.props;
 	}
 	body {
 		font-family: "Barlow", sans-serif;
+		background: var(--a9);
 		font-size: 16px;
 		display: flex;
 		flex-direction: column;
@@ -184,6 +187,11 @@ const { title } = Astro.props;
 
 
 	}
+	@media (prefers-color-scheme: light) {
+		:root {
+			--a9: #191926; /* Mantén el color oscuro incluso en modo claro */
+		}
+	}	
 
 
 
